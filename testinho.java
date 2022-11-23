@@ -1,25 +1,28 @@
-public class testinho {
+public class App {
 
-    public static int multiplicacao(int n, int p){
+    public static int multi(int a, int b) {
         int i;
-        int j;
         int resultado = 0;
-        int total = 0;
-        for (j=1; j<=p; j++){
-            
-            for (i=1;i<=n;i++){
-                System.out.println(n);
-                resultado = resultado + n; 
-                System.out.println(resultado);   
-                
-            }
-            resultado = n;
-        }
-        System.out.println(total);
-        return total;
-    }
-    public static void main(String[] args) throws Exception {
-        System.out.println("Teste");
+        for (i = 0; i < b; i++) {
+            resultado += a;
 
+        }
+        return resultado;
+    }
+
+    public static int potencia(int x, int y) {
+        int resultado = 1;
+        for (int i = 0; i < y; i++) {
+            resultado = App.multi(resultado, x);
+            System.out.println(resultado);
+        }
+        return resultado;
+
+    }
+
+    public static void main(String[] args) throws Exception {
+
+        App.potencia(6, 3);
     }
 }
+
